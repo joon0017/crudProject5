@@ -1,17 +1,14 @@
 package com.crud;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import java.util.*;
 
 @Controller
 public class HomeController{
 
     @RequestMapping("/")
     public String home(){
-        return "index";
+        return "posts";
     }
 
     /*
@@ -21,4 +18,16 @@ public class HomeController{
         //do stuff
         return ".jsp path";
      */
+
+    @RequestMapping("addpostform")
+    public String addPostForm(){
+
+
+        return "add/addpostform";
+    }
+
+    @RequestMapping("addpost")
+    public String addPost(){
+        return "add/addpost";
+    }
 }
