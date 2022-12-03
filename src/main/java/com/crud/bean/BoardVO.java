@@ -5,16 +5,16 @@ import java.util.Date;
 public class BoardVO {
 
 	private String customerName;
-	private int customerNumbers;
+	private String customerNumbers;
 	private String menu;
-	private int contactNum;
+	private String contactNum;
 	private Date date;
 	private String requests;
 	private String paymentMethod;
 	private int orderNum;
 
-	public int getOrderNum() {
-		return orderNum;
+	public String getOrderNum() {
+		return Integer.toString(orderNum);
 	}
 
 	public void setOrderNum(int orderNum) {
@@ -29,11 +29,11 @@ public class BoardVO {
 		this.customerName = customerName;
 	}
 
-	public int getCustomerNumbers() {
+	public String getCustomerNumbers() {
 		return customerNumbers;
 	}
 
-	public void setCustomerNumbers(int customerNumbers) {
+	public void setCustomerNumbers(String customerNumbers) {
 		this.customerNumbers = customerNumbers;
 	}
 
@@ -45,11 +45,11 @@ public class BoardVO {
 		this.menu = menu;
 	}
 
-	public int getContactNum() {
+	public String getContactNum() {
 		return contactNum;
 	}
 
-	public void setContactNum(int contactNum) {
+	public void setContactNum(String contactNum) {
 		this.contactNum = contactNum;
 	}
 
