@@ -30,6 +30,30 @@
 		width:100%;
 		max-width:300px;
 	}
+	.new{
+		display: block;
+		outline: solid 2px black;
+		background-color: cornflowerblue;
+		color: white;
+		position: absolute;
+		font-weight: bold;
+		left: 5%;
+	}
+	.new:hover{
+		background-color: darkslateblue;
+	}
+
+	.logout{
+		display: block;
+		outline: solid 2px black;
+		background-color: indianred;
+		color: white;
+		position: absolute;
+		right: 5%;
+	}
+	.logout:hover{
+		background-color: darkred;
+	}
 </style>
 
 <script>
@@ -71,6 +95,7 @@
 	</tr>
 </c:forEach>
 </table>
-<br/><a href="add">Add New Post</a>
+<br/><a class="new" href="add">Add New Post</a>
+<a class="logout" href="../login/logout">Logout</a>
 </body>
 </html>

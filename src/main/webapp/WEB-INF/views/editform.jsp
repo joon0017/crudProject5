@@ -16,7 +16,7 @@
 <body>
 
 <h1>Edit Form</h1>
-	<form modelAttribute="u" method="get" action="../editok/${u.getOrderNum()}" />
+	<form modelAttribute="u" method="post" action="../editok/${u.getOrderNum()}" />
 <table>
 	<tr><td>Customer Name: </td><td><input type="text" name="CustomerName" value="${u.getCustomerName()}"></td></tr>
 	<tr><td>Number of Customers: </td><td><input type="text" name="CustomerNumbers" value="${u.getCustomerNumbers()}"/></td></tr>

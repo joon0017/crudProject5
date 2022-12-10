@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Board">
+    <insert id="insertBoard">
+        insert into Customers (CustomerName,CustomerNumbers,Menu,ContactNum) values
+        (#{customerName} , #{customerNumbers} , #{menu} , #{contactNum})
+    </insert>
+    <update id="updateBoard">
+        update Customers set CustomerName=#{customerName}, CustomerNumbers=#{customerNumbers}, Menu=#{menu}, ContactNum=#{contactNum}, Requests=#{requests}, PaymentMethod=#{paymentMethod} where seq=#{seq}
+    </update>
+    <delete id="deleteBoard">
+        delete from Customers where seq=#{seq}
+    </delete>
+    <select id="getBoard" resultType="board">
+        select * from Customers where seq=#{seq}
+    </select>
+    <select id="getBoardList" resultType="board">
+        select * from Customers order by seq asc
+    </select>
+</mapper>

@@ -9,7 +9,7 @@
 <body>
 
 <h1>새로운 예약 신청</h1>
-<form action="addok" method="get">
+<form action="addok" method="post">
 <table>
     <tr><td>Customer Name:</td><td><input type="text" name="CustomerName"/> </td></tr>
     <tr><td>Number of Customers:</td><td><input type="text" name="CustomerNumbers"/></td></tr>

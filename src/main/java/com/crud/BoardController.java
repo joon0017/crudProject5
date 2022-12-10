@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 
 @Controller
-@RequestMapping(value="/board")
+@RequestMapping(value = "/board")
 public class BoardController {
     @Autowired
     BoardServiceImplementation boardService;
@@ -26,7 +26,7 @@ public class BoardController {
         return "addpostform";
     }
 
-    @RequestMapping(value = "/addok",method = RequestMethod.GET)
+    @RequestMapping(value = "/addok",method = RequestMethod.POST)
     public String addPostOK(BoardVO vo){
         int i = boardService.insertBoard(vo);
         if (i == 0) System.out.println("데이터 추가 실패");
@@ -40,7 +40,7 @@ public class BoardController {
         return "editform";
     }
 
-    @RequestMapping(value = "/editok/{id}",method = RequestMethod.GET)
+    @RequestMapping(value = "/editok/{id}",method = RequestMethod.POST)
     public String editPostOK(@PathVariable("id") int id , BoardVO vo){
         int i = boardService.updateBoard(vo,id);
         if (i == 0) System.out.println("데이터 수정 실패");
@@ -49,7 +49,7 @@ public class BoardController {
     }
 
     @RequestMapping(value = "/deleteok/{id}",method = RequestMethod.GET)
-    public String editPost(@PathVariable("id") int id){
+    public String deletePost(@PathVariable("id") int id){
         if(boardService.deleteBoard(id)==0) System.out.println("데이토 삭제 실패");
         else System.out.println("데이토 삭제 성공");
         return "redirect:../list";

@@ -11,14 +11,14 @@ public class BoardVO {
 	private Date date;
 	private String requests;
 	private String paymentMethod;
-	private int orderNum;
+	private int seq;
 
 	public String getOrderNum() {
-		return Integer.toString(orderNum);
+		return Integer.toString(seq);
 	}
 
-	public void setOrderNum(int orderNum) {
-		this.orderNum = orderNum;
+	public void setOrderNum(int seq) {
+		this.seq = seq;
 	}
 
 	public String getCustomerName() {
