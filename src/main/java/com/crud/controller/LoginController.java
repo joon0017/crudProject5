@@ -1,4 +1,4 @@
-package com.crud;
+package com.crud.controller;
 
 import com.crud.bean.UserVO;
 import com.crud.dao.UserServiceImplementation;

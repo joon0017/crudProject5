@@ -1,4 +1,4 @@
-package com.crud;
+package com.crud.controller;
 
 import com.crud.bean.BoardVO;
 import com.crud.dao.BoardServiceImplementation;
